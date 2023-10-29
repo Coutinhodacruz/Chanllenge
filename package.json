@@ -1,0 +1,7 @@
+{
+  "name": "Challenge",
+  "version": "1.0.0",
+  "dependencies": {
+    "expect": "^29.7.0"
+  }
+}
