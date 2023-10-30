@@ -1,11 +1,15 @@
-function followsPattern(input) {
-    if (input.length % 4 !== 0) {
+function followsPattern(input, pattern) {
+    const patternLength = pattern.length;
+
+    if (input.length % patternLength !== 0) {
         return false;
     }
 
-    for (let i = 0; i < input.length; i += 4) {
-        if (input[i] !== 'a' || input[i + 1] !== 'b' || input[i + 2] !== 'a' || input[i + 3] !== 'b') {
-            return false;
+    for (let i = 0; i < input.length; i += patternLength) {
+        for (let j = 0; j < patternLength; j++) {
+            if (input[i + j] !== pattern[j]) {
+                return false;
+            }
         }
     }
 
